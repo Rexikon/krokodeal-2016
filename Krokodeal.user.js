@@ -3,11 +3,11 @@
 // @namespace   Krokodeal2016
 // @author	MoNoX
 // @description Absahnen!
-// @downloadURL https://github.com/monoxacc/krokodeal-2016/raw/master/Krokodeal.user.js
-// @include     https://www.mydealz.de/*
-// @exclude     https://www.mydealz.de/xmas-game*
-// @exclude     https://www.mydealz.de/pepper-festival*
-// @exclude     https://www.mydealz.de/halloween*
+// @downloadURL https://github.com/Rexikon/krokodeal-2016/raw/master/Krokodeal.user.js
+// @include     https://www.pepper.pl/*
+// @exclude     https://www.pepper.pl/xmas-game*
+// @exclude     https://www.pepper.pl/pepper-festival*
+// @exclude     https://www.pepper.pl/halloween*
 // @require     https://gist.githubusercontent.com/arantius/3123124/raw/grant-none-shim.js
 // @version     2018.006
 // @grant       none
@@ -304,9 +304,9 @@ function initMessBox()
 		var colllink = document.createElement("a");
 			colllink.innerHTML = "&gt;&gt; My Kroko-Collection &lt;&lt;";
 			var colllinkHref = document.createAttribute("href");
-	                colllinkHref.value = "https://www.mydealz.de/halloween/collection";
-			//colllinkHref.value = "https://www.mydealz.de/xmas-game/collection";
-			//colllinkHref.value = "https://www.mydealz.de/pepper-festival/collection";
+	                colllinkHref.value = "https://www.pepper.pl/halloween/collection";
+			//colllinkHref.value = "https://www.pepper.pl/xmas-game/collection";
+			//colllinkHref.value = "https://www.pepper.pl/pepper-festival/collection";
 			var colllinkTarget = document.createAttribute("target");
 			colllinkTarget.value = "_blank";
 		colllink.setAttributeNode(colllinkHref);
@@ -607,7 +607,7 @@ setMessBoxSpanText("statusspan", "Watch out for Kroko...", "greenyellow");
 var links = $.map($('a[href]'), 
 	function(e)
 	{
-		var regEx = new RegExp("^https:\/\/www\.mydealz\.de\/(deals|gutscheine|freebies).*$");		
+		var regEx = new RegExp("^https:\/\/www\.pepper\.pl\/(deals|gutscheine|freebies).*$");		
 		var bIsValid = regEx.test(e.href);
 		var bIsCurrentPage = (e.href == window.location.href)
 		var bContainsHash = e.href.indexOf("#") > -1;
