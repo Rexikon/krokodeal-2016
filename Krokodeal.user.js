@@ -9,7 +9,7 @@
 // @exclude     https://www.pepper.pl/pepper-festival*
 // @exclude     https://www.pepper.pl/halloween*
 // @require     https://gist.githubusercontent.com/arantius/3123124/raw/grant-none-shim.js
-// @version     2018.006
+// @version     2019.010
 // @grant       none
 // ==/UserScript==
 //   /==========\
@@ -607,7 +607,7 @@ setMessBoxSpanText("statusspan", "Watch out for Kroko...", "greenyellow");
 var links = $.map($('a[href]'), 
 	function(e)
 	{
-		var regEx = new RegExp("^https:\/\/www\.pepper\.pl\/(deals|gutscheine|freebies).*$");		
+		var regEx = new RegExp("^https:\/\/www\.pepper\.pl\/(promocje|nowe|omówione).*$");		
 		var bIsValid = regEx.test(e.href);
 		var bIsCurrentPage = (e.href == window.location.href)
 		var bContainsHash = e.href.indexOf("#") > -1;
